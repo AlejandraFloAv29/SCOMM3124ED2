@@ -1,9 +1,9 @@
 ﻿namespace ArbolesGenerales
 {
-    internal class Nodo
+    internal class Nodo(string valor = "", Nodo? hermano = null, Nodo? hijo = null)
     {
-        public string Valor { get; set; } = string.Empty;
-        public Nodo? Hermano { get; set; } = null;
-        public Nodo? Hijo { get; set; } = null;
+        public string Valor { get; set; } = valor;
+        public Nodo? Hermano { get; set; } = hermano;
+        public Nodo? Hijo { get; set; } = hijo;
     }
 }
