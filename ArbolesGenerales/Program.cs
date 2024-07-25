@@ -4,7 +4,12 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            Arbol arbol = new Arbol("A");
+            Console.WriteLine(arbol.Raiz.Valor);
+
+            Nodo nodoB = arbol.Agregar("B", arbol.Raiz);
+            Nodo nodoC = arbol.Agregar("C", arbol.Raiz);
+            Nodo nodoD = arbol.Agregar("D", nodoB);
         }
     }
 }
