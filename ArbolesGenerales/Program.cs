@@ -10,6 +10,8 @@
             Nodo nodoB = arbol.Agregar("B", arbol.Raiz);
             Nodo nodoC = arbol.Agregar("C", arbol.Raiz);
             Nodo nodoD = arbol.Agregar("D", nodoB);
+            Nodo nodoE = arbol.Agregar("E", nodoB);
+            Nodo nodoF = arbol.Agregar("F", nodoB);
         }
     }
 }

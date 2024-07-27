@@ -3,9 +3,10 @@
     internal class Arbol
     {
         public Nodo Raiz { get; }
-        public Arbol(string raiz)
+
+        public Arbol(string dato)
         {
-            Raiz = new Nodo(raiz);
+            Raiz = new Nodo(dato);
         }
 
         public Nodo Agregar(string valor, Nodo nodoPadre)
