@@ -1,9 +1,16 @@
 ﻿namespace ArbolesGenerales
 {
-    internal class Nodo(string valor = "", Nodo? hermano = null, Nodo? hijo = null)
+    internal class Nodo
     {
-        public string Valor { get; set; } = valor;
-        public Nodo? Hermano { get; set; } = hermano;
-        public Nodo? Hijo { get; set; } = hijo;
+        public string Valor { get; set; }
+        public Nodo? Hermano { get; set; }
+        public Nodo? Hijo { get; set; }
+
+        public Nodo(string valor = "", Nodo? hermano = null, Nodo? hijo = null)
+        {
+            Valor = valor;
+            Hermano = hermano;
+            Hijo = hijo;
+        }
     }
 }
