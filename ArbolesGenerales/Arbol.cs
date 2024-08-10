@@ -37,5 +37,10 @@
                 return nodoActual.Hermano;
             }
         }
+
+        private void Recorrer(Nodo nodo) 
+        {
+
+        }
     }
 }
