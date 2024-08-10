@@ -38,9 +38,42 @@
             }
         }
 
-        private void Recorrer(Nodo nodo) 
+        private void Recorrer(Nodo nodo, ref int posicion, ref string datos)
         {
+            if (nodo != null)
+            {
+                string dato = nodo.Valor;
+                int cantidadGuiones = dato.Length + posicion;
+                string datoConGuiones = dato.PadLeft(cantidadGuiones, '-');
+                datos += $"{datoConGuiones}{Environment.NewLine}";
+                //Es lo mismo pero en una sola linea
+                //datos += $"{nodo.Valor.PadLeft(nodo.Valor.Length + posicion, '-')}{Environment.NewLine}";
 
+                if (nodo.Hijo != null)
+                {
+                    posicion++;
+                    Recorrer(nodo.Hijo, ref posicion, ref datos);
+                    posicion--;
+                }
+
+                if (nodo.Hermano != null && posicion != 0)
+                {
+                    Recorrer(nodo.Hermano, ref posicion, ref datos);
+                }
+            }
+        }
+
+        public string Obtener(Nodo nodo = null)
+        {
+            if (nodo == null)
+            {
+                nodo = Raiz;
+            }
+
+            int posicion = 0;
+            string datos = string.Empty;
+            Recorrer(nodo, ref posicion, ref datos);
+            return datos;
         }
     }
 }
